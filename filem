@@ -1,0 +1,42 @@
+import os
+
+def ask():
+	a = input(os.getcwd()+'\n>')
+	do(a)
+
+def do(self):
+
+	inpt = self.split(' ')
+	func = inpt[0]
+	try:
+		arg = inpt[1]
+	except:
+		pass
+	try:
+		arg2 = inpt[2]
+	except:
+		pass
+
+	if func == 'cd':
+		os.chdir(arg)
+	elif func == 'mkdir':
+		os.mkdir(arg)
+	elif func == 'rename':
+		os.rename(arg,inpt[2])
+	elif func == 'rmdir':
+		os.rmdir(arg)
+	elif func == 'listdir':
+		print(os.listdir())
+	elif func == 'remove':
+		os.remove(arg)
+	else:
+		print('heh')
+	
+	ask()
+
+
+
+
+
+ask()
+
