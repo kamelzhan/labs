@@ -1,0 +1,115 @@
+def m(list, index):
+    return list[index]
+
+print(m([10, 3, 4, 5, 9], 3))
+print(m([10, 3, 4, 5, 9], 4))
+
+
+def m(list):
+    return list[0: :2]
+print(m([10, 3, 4, 5, 9]))
+print(m([9, 0, 12, 3, 4, 56, 9, 16]))
+
+
+def m(list, index1):
+    new_list = list[:index1:]
+    for i in list[index1 : : ]:
+        i=i**2
+        new_list.append(i)
+    return new_list
+new_list=[ ]
+print(m([10, 3, 4, 5, 9], 2))
+print(m([9, 0, 12, 3, 4, 56, 9, 16], 6))
+
+
+def m(my_list):
+    my_list.reverse()
+    return my_list
+print(m([10, 3, 4, 5, 9]))
+print(m([9, 0, 12, 3, 4, 56, 9, 16]))
+
+
+def my_function(my_list, index1):
+    new_list = my_list[:index1 : ]
+    return new_list
+
+new_list=[ ]
+print(my_function([10, 3, 4, 5, 9], 1))
+print(my_function([9, 0, 12, 3, 4, 56, 9, 16], 7))
+
+
+def my_function(first_list,i,j,second_list):
+    l=0
+    for k in range(i,i+len(second_list)):
+        first_list.insert(k,second_list[l])
+        l+=1
+    for d in range(j,len(first_list)):
+        del first_list[j]
+    return first_list        
+
+print(my_function([10, 3, 4, 5, 9], 3, 4, [1, 2, 3]))
+
+
+def my_function(my_tuple):
+    my_tuple=my_tuple[-1:]+my_tuple[:-1]
+    return my_tuple
+print(my_function((5, 3, 2)))
+print(my_function(('Hi', 'Ola', 'xD')))
+
+
+def my_function(my_list):
+    max1=max(my_list)
+    min1=min(my_list)
+    return max1,min1
+print(my_function([10, 2, 5, -3, -1]))
+print(my_function([5, 2, 8, 4]))
+
+
+def my_function(my_tuple):
+    for i in my_tuple:
+        if type(i) == list:
+            return True
+        elif type(i) == set:
+            return True
+        elif type(i) == dict:
+            return True
+    return False
+
+print(my_function((10, 2, 5, [4, 8, 2], 3, 5)))
+print(my_function((5, 2.5, 8, 4, 'Hi', -5, True, 6)))
+
+
+def my_function(my_set):
+    new_set = set()
+    for i in my_set:
+        new_set.update({i-1, i+1})
+    return new_set
+
+print(my_function({1, 5 ,9}))
+print(my_function({2, 5, 7, 8, 10}))
+
+
+def my_function(my_set):
+    new_set = set()
+    for i in my_set:
+        new_set.update({i-1, i+1})
+    return new_set
+
+print(my_function({1, 5 ,9}))
+print(my_function({2, 5, 7, 8, 10}))
+
+
+def my_function(my_list):
+    new_set=set()
+    for i in my_list:
+        if my_list.count(i)>1:
+            new_set.add(i)
+            my_list.remove(i)
+            i=i**2
+            new_set.add(i);
+        else:
+            new_set.add(i)
+    return new_set
+
+print(my_function([1, 2, 2]))
+print(my_function([1, 2, 3, 4, 16]))
