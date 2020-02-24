@@ -30,11 +30,11 @@ def do(self):
 	elif func == 'remove':
 		os.remove(arg)
 	elif func == 'open':
-		f = open('1.txt', "r")
+		f = open(arg, "r")
 		strr = f.read()
 		f.close()
 		aa = input(strr)
-		f = open('1.txt', "a")
+		f = open(arg, "a")
 		f.write(aa)
 		f.close()
 	else:
