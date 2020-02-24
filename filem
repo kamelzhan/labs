@@ -29,14 +29,18 @@ def do(self):
 		print(os.listdir())
 	elif func == 'remove':
 		os.remove(arg)
+	elif func == 'open':
+		f = open('1.txt', "r")
+		strr = f.read()
+		f.close()
+		aa = input(strr)
+		f = open('1.txt', "a")
+		f.write(aa)
+		f.close()
 	else:
 		print('heh')
 	
 	ask()
-
-
-
-
 
 ask()
 
